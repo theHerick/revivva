@@ -18,50 +18,80 @@ body {
 /* Navbar */
 .navbar {
   width: 100%;
-  padding: 16px 20px;
+  padding: 18px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(238, 238, 238, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
+  transition: all 0.3s ease;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #6366f1;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 16px;
+  gap: 20px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-size: 0.85rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
 }
 
 .hero {
-  min-height: 100vh; /* cobre a tela toda */
+  min-height: 100vh;
   display: flex;
-  align-items: flex-start; /* alinha no topo em vez do centro */
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: 120px 20px 0; /* mais padding no topo */
-  background: url('assets/bg.jpg') no-repeat center top; /* posiciona no topo */
-  background-size: contain; /* mantém a proporção da imagem */
-  background-color: #fdfdfd;
+  padding: 140px 25px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   background-attachment: scroll;
   text-align: left;
   position: relative;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('assets/bg.jpg') no-repeat center top;
+  background-size: contain;
+  opacity: 0.1;
+  z-index: 1;
 }
 
 /* Para telas maiores, você pode usar cover */
@@ -75,50 +105,74 @@ body {
 .hero-text {
   max-width: 90%;
   z-index: 2;
+  position: relative;
 }
 
 .hero-text h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;   /* tamanho ajustado para mobile */
-  line-height: 1.4;
-  margin-bottom: 20px;
-  color: #111;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background: #111;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
-  font-size: 0.85rem;
-  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
   text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 /* Seção Sobre */
 .sobre {
-  padding: 60px 20px;
+  padding: 80px 25px;
   background: #fff;
+  text-align: center;
 }
 
 .sobre h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  margin-bottom: 12px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.sobre p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Seção Serviços */
 .servicos {
-  padding: 60px 20px;
-  background: #f9f9f9;
+  padding: 80px 25px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background-attachment: fixed;
 }
 
 .servicos h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
   text-align: center;
-  color: #111;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .servicos-grid {
@@ -138,15 +192,16 @@ body {
 }
 
 .servico-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
   padding: 40px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .servico-card:before {
@@ -156,14 +211,15 @@ body {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #111, #444);
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
 .servico-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
 }
 
 .servico-card:hover:before {
@@ -345,6 +401,29 @@ body {
   font-size: 0.95rem;
 }
 
+.social-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
 .contato-form {
   background: #fff;
   padding: 35px 30px;
@@ -375,19 +454,22 @@ body {
 
 .btn-form {
   width: 100%;
-  padding: 15px;
-  background: #111;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .btn-form:hover {
-  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 /* Footer */
