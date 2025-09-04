@@ -52,8 +52,10 @@ body {
 .hero {
   min-height: 100vh; /* cobre a tela toda */
   display: flex;
-  align-items: center;
-  padding: 0 20px;
+  align-items: flex-start; /* alinha no topo em vez do centro */
+  justify-content: center;
+  flex-direction: column;
+  padding: 120px 20px 0; /* mais padding no topo */
   background: url('assets/bg.jpg') no-repeat center top; /* posiciona no topo */
   background-size: contain; /* mantém a proporção da imagem */
   background-color: #fdfdfd;
@@ -194,4 +196,208 @@ body {
   line-height: 1.7;
   color: #555;
   margin-top: 15px;
+}
+
+/* Seção Portfólio */
+.portfolio {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.portfolio h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #111;
+}
+
+.portfolio-intro {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.portfolio-item {
+  background: #f8f8f8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-image {
+  height: 200px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.portfolio-placeholder {
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.portfolio-info {
+  padding: 25px 20px;
+}
+
+.portfolio-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.portfolio-info p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Seção Contato */
+.contato {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.contato h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #111;
+}
+
+.contato-intro {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contato-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contato-content {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+  }
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contato-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.contato-item p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.contato-form {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #111;
+}
+
+.btn-form {
+  width: 100%;
+  padding: 15px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-form:hover {
+  background: #333;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.footer p {
+  color: #ccc;
+  font-size: 0.85rem;
 }
