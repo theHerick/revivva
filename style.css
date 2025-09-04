@@ -54,9 +54,9 @@ body {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  background: url('assets/bg.jpg') no-repeat center top/cover;
-  background-color: #fdfdfd;
-  background-position: center 0; /* força a imagem a ficar no topo */
+  background: url('assets/bg.jpg') no-repeat center center;
+  background-size: contain; /* mostra a imagem completa sem esticar */
+  background-color: #f5f5f5; /* cor de fundo complementar */
   background-attachment: scroll; /* remove o parallax que pode causar problemas no mobile */
   text-align: left;
   position: relative;
