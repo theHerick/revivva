@@ -1,21 +1,22 @@
-/* === Reset Básico === */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* === Fonte e Cores === */
+/* Fontes e paleta */
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: #111;
-  background: #f9f9f9;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #f8f8f8;
+  line-height: 1.6;
 }
 
-/* === Navbar === */
+/* Navbar */
 .navbar {
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,25 +25,27 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #eee;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 28px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
@@ -50,35 +53,46 @@ body {
   color: #a45ee5;
 }
 
-/* === Hero Section === */
+/* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 12%;
   background: url('assets/bg.jpg') no-repeat right center/contain;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, #f8f8f8 60%, transparent 100%);
+  z-index: 1;
 }
 
 .hero-text {
-  max-width: 500px;
-  text-align: left;
+  max-width: 480px;
+  z-index: 2;
 }
 
 .hero-text h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  line-height: 1.3;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #111;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 12px 28px;
   background: #111;
   color: #fff;
-  font-weight: 500;
-  border-radius: 4px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
   text-decoration: none;
   transition: background 0.3s ease;
 }
@@ -87,15 +101,15 @@ body {
   background: #a45ee5;
 }
 
-/* === Sobre === */
+/* Sobre */
 .sobre {
-  padding: 100px 10%;
+  padding: 100px 12%;
   background: #fff;
-  text-align: left;
 }
 
 .sobre h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #111;
 }
