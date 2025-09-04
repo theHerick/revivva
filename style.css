@@ -11,6 +11,8 @@ body {
   color: #222;
   background: #f9f9f9;
   line-height: 1.6;
+  margin: 0;
+  padding-top: 60px; /* empurra o conteúdo pra não ficar atrás da navbar */
 }
 
 /* Navbar */
@@ -49,15 +51,15 @@ body {
 
 /* Hero (mobile first) */
 .hero {
-  height: 100vh;
+  min-height: 100vh; /* cobre a tela toda */
   display: flex;
   align-items: center;
   padding: 0 20px;
-  background: url('assets/bg.jpg') no-repeat right top/cover; /* 👈 aqui o truque */
+  background: url('assets/bg.jpg') no-repeat center top/cover; /* colada no topo */
   background-color: #fdfdfd;
   text-align: left;
-  margin-top: 60px; /* altura da navbar */
 }
+
 .hero-text {
   max-width: 90%;
   z-index: 2;
