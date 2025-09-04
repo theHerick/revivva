@@ -49,14 +49,14 @@ body {
   font-weight: 400;
 }
 
-/* Hero (mobile first) */
 .hero {
   min-height: 100vh; /* cobre a tela toda */
   display: flex;
-  align-items: top;
+  align-items: center;
   padding: 0 20px;
-  background: url('assets/bg.jpg') no-repeat center top/cover; /* colada no topo */
+  background: url('assets/bg.jpg') no-repeat center top/cover;
   background-color: #fdfdfd;
+  background-attachment: fixed; /* efeito parallax 👈 */
   text-align: left;
 }
 
