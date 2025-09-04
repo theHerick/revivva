@@ -56,8 +56,10 @@ body {
   padding: 0 20px;
   background: url('assets/bg.jpg') no-repeat center top/cover;
   background-color: #fdfdfd;
-  background-attachment: fixed; /* efeito parallax 👈 */
+  background-position: center 0; /* força a imagem a ficar no topo */
+  background-attachment: scroll; /* remove o parallax que pode causar problemas no mobile */
   text-align: left;
+  position: relative;
 }
 
 .hero-text {
