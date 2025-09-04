@@ -54,7 +54,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  background: url('assets/bg.jpg') no-repeat center center;
+  background: url('assets/bg.jpg') no-repeat center top; /* posiciona no topo */
   background-size: contain; /* mantém a proporção da imagem */
   background-color: #fdfdfd;
   background-attachment: scroll;
@@ -66,7 +66,7 @@ body {
 @media (min-width: 768px) {
   .hero {
     background-size: cover;
-    background-position: center center;
+    background-position: center top; /* mantém o topo também em desktop */
   }
 }
 
