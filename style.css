@@ -53,11 +53,11 @@ body {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  background: url('assets/bg.jpg') no-repeat right bottom/120%;
+  background: url('assets/bg.jpg') no-repeat right top/cover; /* 👈 aqui o truque */
   background-color: #fdfdfd;
   text-align: left;
+  margin-top: 60px; /* altura da navbar */
 }
-
 .hero-text {
   max-width: 90%;
   z-index: 2;
